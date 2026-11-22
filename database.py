@@ -30,9 +30,6 @@ class ResultRecord(Base):
     created_at = Column(DateTime(timezone=True), default=utcnow)
 
 
-# Base.metadata.create_all(bind=engine) перенесён в main.py (lifespan)
-
-
 def get_db():
     db = SessionLocal()
     try:
